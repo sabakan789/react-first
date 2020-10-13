@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { createStore } from "redux";
-import { Provaider } from "react-redux";
+import { Provider } from "react-redux";
 
 import "./index.css";
 import reducer from "./reducers";
@@ -11,9 +11,9 @@ import * as serviceWorker from "./serviceWorker";
 const store = createStore(reducer);
 
 ReactDOM.render(
-  <Provaider store={store}>
+  <Provider store={store}>
     <App />
-  </Provaider>,
+  </Provider>,
   document.getElementById("root")
 );
 
